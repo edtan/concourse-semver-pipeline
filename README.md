@@ -1,2 +1,3 @@
 # concourse-semver-pipeline
-Concourse pipeline example
+
+An example of a Concourse pipeline to illustrate how to utilize idempotence. 
