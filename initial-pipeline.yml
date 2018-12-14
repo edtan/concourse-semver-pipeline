@@ -51,6 +51,8 @@ jobs:
             echo "This is version ${ver} of the app, based on ${sha}" > results/app-v${ver}.txt
       outputs:
         - name: results
+  - put: version
+    params: {file: version/version}
   - put: github-release
     params:
       name: version/version
@@ -59,5 +61,3 @@ jobs:
       commitish: app-repo/.git/ref
       globs:
       - results/app-v*.txt
-  - put: version
-    params: {file: version/version}
