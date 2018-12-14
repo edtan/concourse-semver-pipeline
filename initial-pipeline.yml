@@ -27,8 +27,8 @@ jobs:
   plan:
   - aggregate:
     - get: app-repo
-    - get: version
       trigger: true
+    - get: version
       params:
         pre: rc
   - task: Build application

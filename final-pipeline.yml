@@ -38,9 +38,9 @@ jobs:
   - aggregate:
     - get: app-repo
       passed: [version-rc]
+      trigger: true
     - get: version
       passed: [version-rc]
-      trigger: true
   - task: Build application
     config:
       platform: linux
